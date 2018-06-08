@@ -1,6 +1,24 @@
 dockprom
 ========
 
+---
+
+This repository is identical to the upstream with one exception: It adds another 
+container, serving as a dummy app that serves `/metrics` to prometheus.
+
+**Quick Start:**
+
+```shell
+$ docker-compose up
+```
+
+Then go do:
+- <http://localhost:3000> for Grafana
+- <http://localhost:9090> for Prometheus (search for `dannyb` metric)
+- <http://localhost:4000/metrics> for the dummy app metrics
+
+---
+
 A monitoring solution for Docker hosts and containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor), 
 [NodeExporter](https://github.com/prometheus/node_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
 
